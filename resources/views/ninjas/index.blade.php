@@ -1,10 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ninja Network | Home</title>
-</head>
-<body>
+<x-layout>
     <h2>Currently Available Ninjas</h2>
 
     @if($greeting == 'Hello ')
@@ -20,5 +14,6 @@
             </li>
         @endforeach
     </ul>
-</body>
-</html>
+</x-layout>
+
+
