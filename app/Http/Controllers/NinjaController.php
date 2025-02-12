@@ -12,7 +12,9 @@ class NinjaController extends Controller
         // fetch all records & pass into the index view
 
         // $ninjas = Ninja::all();
-        $ninjas = Ninja::orderBy('created_at', 'desc')->get();
+//        $ninjas = Ninja::orderBy('created_at', 'desc')->get(); // get all ninjas
+        $ninjas = Ninja::orderBy('created_at', 'desc')->paginate(10); // get first 10
+
 
         return view('ninjas.index', ['ninjas' => $ninjas]);
     }
